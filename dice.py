@@ -10,14 +10,25 @@ class Die:
 
         self.value = value or random.randint(1, sides)
 
+# extends Die class
+class D6(Die):
+    # overrides init
+    def __init__(self, value = 0):
+        super().__init__(sides = 6, value = value)
+
+
 # prints a random number between 1 and 2
 d = Die()
 print(d.value)
 
-# prints a random number between 1 and 20
-d20 = Die(sides = 20)
-print(d20.value)
+# prints a random number between 1 and 6
+d6 = Die(sides = 6)
+print(d6.value)
 
 # prints 6
 six = Die(value = 6)
 print(six.value)
+
+# also prints a random number between 1 and 6
+d6 = D6()
+print(d6.value)
