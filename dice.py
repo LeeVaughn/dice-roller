@@ -40,6 +40,9 @@ class Die:
     def __radd__(self, other):
         return int(self) + other
 
+    def __repr__(self):
+        return str(self.value)
+
 
 # extends Die class
 class D6(Die):
